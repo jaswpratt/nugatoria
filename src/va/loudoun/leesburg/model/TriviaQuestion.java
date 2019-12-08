@@ -106,6 +106,16 @@ public class TriviaQuestion {
    public void setIncorrectAnswers(ArrayList<String> incorrectAnswers) {
       this.incorrectAnswers = incorrectAnswers;
    }
+
+@Override
+public String toString() {
+   return "TriviaQuestion [category=" + category + 
+         ", type=" + type + 
+         ", difficulty=" + difficulty + 
+         ", question=" + question + 
+         ", correctAnswer=" + correctAnswer +
+         ", incorrectAnswers=" + incorrectAnswers + "]";
+}
    
    
 

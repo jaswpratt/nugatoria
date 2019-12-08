@@ -21,6 +21,8 @@ public class TriviaSourceDAO {
 
 	public List getTriviaQuestions() {
 		List triviaQuestionsList = new ArrayList<TriviaQuestion>();
+		TriviaQuestion triviaQuestion = new TriviaQuestion();
+		
 		
 		return triviaQuestionsList;
 	}
