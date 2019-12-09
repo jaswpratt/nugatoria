@@ -1,4 +1,4 @@
-# Nugatoria is Nugatory - <font color="#660000">(Under Developement)</font>
+# Nugatoria is Nugatory - <em style="color:#660000">(Under Developement)</em>
 <em>Nugatoria is Nugatory</em> is a web application trivia question and answer game. It allows players to chose:
   <ul>
     <li>A Trivia Category
