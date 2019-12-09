@@ -40,4 +40,20 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
 </ol>
   
-      
+#Software
+<ul>
+  <li>Java libraries
+    <ul>
+       <li>javax.servlet-3.0.jar</li>
+    </ul>
+  </li>
+  <li>Javascript libraries
+    <ul>
+      <li>bootstrap-4.4.1</li>
+      <li>jQuery.3.4.1</li>
+      <li>jquery-ui-1.12.1</li>
+      <li>jquery-easyui-1.9.0</li>
+    </ul>
+  </li>
+</ul>
+
