@@ -22,13 +22,13 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
 
 # Architecture Overview
 <ol>
-  <li>Platforms/IDE:
+  <li>Platform/IDE
     <ul>
       <li>Java Platform, Enterprise Edition(Java EE) 8</li>
       <li>Eclipse 2019</li>
     </ul>
   </li>
-  <li>Servers:
+  <li>Servers
     <ul>
       <li>Apache Tomcat 8</li>
     </ul>
