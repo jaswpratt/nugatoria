@@ -8,7 +8,7 @@
   </ul>
 
 Once the player has selected the criteria for their game, the web app retrieves questions for the game from the <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> using their API. <br>
-<em>Nugatoria</em> sends a <i><b>get</b></i> request to <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> with these 5 parameters:
+<em>Nugatoria</em> sends a <i><b>get</b></i> request to the<a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> API with these 5 parameters:
     <ul>
       <li>amount
       <li>category
