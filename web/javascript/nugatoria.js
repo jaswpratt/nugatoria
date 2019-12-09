@@ -1,6 +1,7 @@
 /**
  * nugatoria.js
  * https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js
+ * https://www.w3schools.com/js/js_json_files.asp
  */
 
 
