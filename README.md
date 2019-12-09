@@ -30,7 +30,8 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
   <li>Servers
     <ul>
-      <li>Apache Tomcat 8</li>
+      <li>Apache Tomcat 8 - currently running locally as <tt>localhost:port#/nugatoria</tt></li>
+      <li>nugatoria.war</li>
     </ul>
   </li>
   <li>Data Source
