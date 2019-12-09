@@ -31,7 +31,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   <li>Servers
     <ul>
       <li>Apache Tomcat 8 - currently running locally as <tt>localhost:port#/nugatoria</tt></li>
-      <li>nugatoria.war</li>
+      <li>nugatoria.war - created using Ant build task <b>war</b></li>
     </ul>
   </li>
   <li>Data Source
