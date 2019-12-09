@@ -67,7 +67,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
   
   
-  <li>
+  <li>Model Objects
     <ul>
        <li><a href="https://github.com/jaswpratt/nugatoria/blob/master/src/va/loudoun/leesburg/model/Categories.java">Categories.java</a></li>
        <li><a href="https://github.com/jaswpratt/nugatoria/blob/master/src/va/loudoun/leesburg/model/Response.java">Response.java</a></li>
@@ -77,7 +77,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
   
   
-  <li>
+  <li>Data Access Objects (DAO)
     <ul>
       <li><a href="https://github.com/jaswpratt/nugatoria/blob/master/src/va/loudoun/leesburg/dao/TriviaSourceDAO.java">TriviaSourceDAO.java</a></li>
     </ul>
