@@ -60,9 +60,9 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
 
 # Java Classes
 <ul>
-  <li>
+  <li>Controller
     <ul>
-      <li><a href=""></a></li>
+      <li><a href="https://github.com/jaswpratt/nugatoria/blob/master/src/va/loudoun/leesburg/controller/TriviaServlet.java">TriviaServlet.java</a></li>
     </ul>
   </li>
   
@@ -79,7 +79,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   
   <li>
     <ul>
-      <li><a href=""></a></li>
+      <li><a href="https://github.com/jaswpratt/nugatoria/blob/master/src/va/loudoun/leesburg/dao/TriviaSourceDAO.java">TriviaSourceDAO.java</a></li>
     </ul>
   </li>
 </ul>
