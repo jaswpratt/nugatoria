@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<project name="Template Project" default="compile" basedir=".">
+<project name="Nugatoria" default="compile" basedir=".">
    <property file="build.properties"/>
    <target name="init">
       <tstamp />
    </target>
    <target name="info">
-      <echo>Hello Template Project - Welcome to your new Template!</echo>
+      <echo>- Welcome to Nugatoria!</echo>
    </target>
 
    <target name="deploy" depends="war">
@@ -19,6 +19,9 @@
    </target>
 
    <target name="compile" >
+   	<echo>"${basedir}"</echo>
+   	<echo>"${project.dir.deploy}"</echo>
+   	<echo>"${project.app.warname}"</echo>
       <delete dir="${project.dir.deploy}/web/WEB-INF/classes" />
    	  <mkdir dir="${project.dir.deploy}/web/WEB-INF/classes" />
    	  <javac destdir="${project.dir.deploy}/web/WEB-INF/classes" srcdir="src" includeantruntime="false">
@@ -26,17 +29,14 @@
    	        <fileset dir="${basedir}/web/WEB-INF/lib">
    	           <include name="*" />	
    	        </fileset>
-   	     	<fileset dir="${tomcat.webapps.dir}/../lib" id="id">
+   	     	<!--<fileset dir="${tomcat.webapps.dir}/../lib" id="id">
                <include name="servlet*.jar"/>
-            </fileset>
-   	        <fileset dir="${tomcat.webapps.dir}/../lib" id="id">
-   	           <include name="servlet*.jar"/>
-   	        </fileset>
+            </fileset>-->
    	     </classpath>
    	  </javac>
    	  <copy todir="${project.dir.deploy}/web/WEB-INF/classes">
    	     <fileset dir="src">
-   	        <include name="**/*.properties" />
+   	
    	     	  <include name="**/*.xml" />
            </fileset>
    	  </copy>
@@ -44,7 +44,7 @@
 	
 	<target name="war" depends="clean,compile" >
       <mkdir dir="${project.dir.dist}"/>
-		<war destfile="${project.dir.dist}/${project.app.warname" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
+		<war destfile="${project.dir.dist}/${project.app.warname}" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
 		   <exclude name="WEB-INF/**" />
 			<lib dir="${basedir}/web/WEB-INF/lib">
 			   <include name="*.jar" />
