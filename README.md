@@ -50,10 +50,10 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
   <li>Javascript libraries
     <ul>
-      <li>bootstrap-4.4.1</li>
-      <li>jQuery.3.4.1</li>
-      <li>jquery-ui-1.12.1</li>
-      <li>jquery-easyui-1.9.0</li>
+      <li><a href="https://getbootstrap.com/" target="_blank">bootstrap-4.4.1</a></li>
+      <li><a href="https://jquery.com/" target="_blank">jQuery.3.4.1</a></li>
+      <li><a href="https://jqueryui.com/" target="_blank">jquery-ui-1.12.1</a></li>
+      <li><a href="http://www.jeasyui.com/" target="_blank">jquery-easyui-1.9.0</a></li>
     </ul>
   </li>
 </ul>
