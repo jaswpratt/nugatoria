@@ -1,4 +1,4 @@
-# Nugatoria
+# Nugatoria is Nugatory
 <em>Nugatoria is Nugatory</em> is a web application trivia question and answer game. It allows players to chose:
   <ul>
     <li>A Trivia Category
