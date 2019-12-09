@@ -3,7 +3,7 @@
   <ul>
     <li>A Trivia Category
     <li>The number questions to answer
-    <li>Type of question True/False, Multiple Choice
+    <li>Type of question - True/False, Multiple Choice
     <li>and Difficulty level
   </ul>
 
@@ -17,4 +17,5 @@ Once the player has selected the criteria for their game, the web app retrieves 
       <li>encode
     </ul>
   
-  <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then responds with a json string back to the  <em>Nugatoria</em> web app.
+The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then responds with a json string back to the  <em>Nugatoria</em> web app. 
+<em>Nugatoria</em> then processes the json string into a collection of questions and answers to be displayed one at a time in the browser for the player to answer. The web app keeps track of the players right and wrong answers and displays their quiz results when all questions have been answered. 
