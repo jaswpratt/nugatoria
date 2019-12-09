@@ -54,6 +54,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
       <li><a href="https://jquery.com/" target="_blank">jQuery.3.4.1</a></li>
       <li><a href="https://jqueryui.com/" target="_blank">jquery-ui-1.12.1</a></li>
       <li><a href="http://www.jeasyui.com/" target="_blank">jquery-easyui-1.9.0</a></li>
+      <li><a href="http://www.d3js.org/" target="_blank">d3.js</a></li>
     </ul>
   </li>
 </ul>
