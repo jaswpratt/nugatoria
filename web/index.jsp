@@ -27,10 +27,10 @@
          <h3>Trivia Quiz Selection</h3>
          <p>Choose the number of questions, question type and category for your game.</p>
          <div id="gameQuestionParams">
-            <input id="count" class="easyui-combobox" name="count"><br>
-            <input id="category" class="easyui-combobox" name="category"><br>
-            <input id="type" class="easyui-combobox" name="type"><br>
-            <input id="difficulty" class="easyui-combobox" name="difficulty">
+            <p><input id="count" class="easyui-combobox" name="count"></p>
+            <p><input id="category" class="easyui-combobox" name="category"></p>
+            <p><input id="type" class="easyui-combobox" name="type"></p>
+            <p><input id="difficulty" class="easyui-combobox" name="difficulty"></p>
          </div>
        </div>
        <div class="col-sm-4">
