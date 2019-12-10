@@ -4,6 +4,7 @@
    <head>
       <meta charset="ISO-8859-1">
       <link rel="stylesheet" type="text/css" href="css/nugatoria.css"></link>
+      <link rel="stylesheet" type="text/css" href="jsLib/bootstrap-4.4.1/css/bootstrap.css"></link>
       <script type="text/javascript" src="jsLib/jQuery.3.4.1/jquery-3.4.1.js" ></script>
       <script type="text/javascript" src="jsLib/jquery-ui-1.12.1/jquery-ui.js" ></script>
       <script type="text/javascript" src="jsLib/bootstrap-4.4.1/js/bootstrap.js" ></script>
