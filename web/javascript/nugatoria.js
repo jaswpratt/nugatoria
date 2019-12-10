@@ -44,6 +44,23 @@
              difficulty.id = rec.id;
              difficulty.value = rec.difficulty;
           }
-       });
+     });
+     $('#getTriviaQuiz').linkbutton({
+        iconCls: 'icon-search',
+        onClick: function(){
+           $.post("triviaServlet.do",{
+                  count: count.id,
+                  category: category.id,
+                  type: type.id,
+                  difficulty: difficulty.id
+           }, function(data, status, xhr){
+              triviaQuizCallback(data, status);
+           }, "text");
+        } 
+     });
    });
 
+   function triviaQuizCallback(data, status){
+      alert(data);
+      alert(status);
+   }
