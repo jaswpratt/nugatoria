@@ -13,7 +13,7 @@ import va.loudoun.leesburg.model.TriviaQuestion;
  *
  */
 public class TriviaSourceDAO {
-        public static final String opentdbUrl = "https://opentdb.com/api.php?";
+        public static final String opentdbUrl = "https://opentdb.com/api.php";
 	/**
 	 * 
 	 */
