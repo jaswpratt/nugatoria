@@ -31,11 +31,11 @@ public class TriviaSourceDAO {
          otdbUrlGetRequest.append("&difficulty=" + difficulty);
          otdbUrlGetRequest.append("&type=" + type);
          otdbUrlGetRequest.append("&encode=url3986");
-
-         String triviaQuestionJson = callOtdbUrl(otdbUrlGetRequest.toString());
-
-         List triviaQuestionsList = new ArrayList<TriviaQuestion>();
-         TriviaQuestion triviaQuestion = new TriviaQuestion();
+         System.out.println(otdbUrlGetRequest.toString());
+         String triviaJson = callOtdbUrl(otdbUrlGetRequest.toString());
+         System.out.println(triviaJson);
+         //List triviaQuestionsList = new ArrayList<TriviaQuestion>();
+         //TriviaQuestion triviaQuestion = new TriviaQuestion();
 
          return triviaQuestionsList;
       }
