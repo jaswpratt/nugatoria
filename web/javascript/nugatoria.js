@@ -4,7 +4,7 @@
  * https://www.w3schools.com/js/js_json_files.asp
  */
    var count {id : "10", value: "10"};
-   var category {id : "any",value: "Any Category"};
+   var category {id : "any", value: "Any Category"};
    var type {id : "any", value: "Any Type"};
    var difficulty {id : "any", value: "Any Difficulty"};
 
