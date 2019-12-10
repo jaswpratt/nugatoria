@@ -5,12 +5,12 @@
 <web-app>
 
   <servlet>
-    <servlet-name>controlServlet</servlet-name>
-    <servlet-class>com.jenkov.butterfly.ControlServlet</servlet-class>
+    <servlet-name>TriviaServlet</servlet-name>
+    <servlet-class>va.loudoun.leesburg.controller.TriviaServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>controlServlet</servlet-name>
-    <url-pattern>*.html</url-pattern>
+    <servlet-name>TriviaServlet</servlet-name>
+    <url-pattern>/trivia.do</url-pattern>
   </servlet-mapping>
 </web-app> 
