@@ -17,31 +17,54 @@ import va.loudoun.leesburg.model.TriviaQuestion;
  *
  */
 public class TriviaSourceDAO {
-        public static final String opentdbUrl = "https://opentdb.com/api.php";
-	/**
-	 * 
-	 */
-	public TriviaSourceDAO() { }
+   public static final String opentdbUrl = "https://opentdb.com/api.php";
+   /**
+    * 
+    */
+   public TriviaSourceDAO() { }
 
-	public List getTriviaQuestions(String count, String category, String type, String difficulty) {
-		StringBuffer otdbUrlGetRequest = new StringBuffer();
-		otdbUrlGetRequest.append(opentdbUrl);
-		otdbUrlGetRequest.append("?amount=" + count);
-		otdbUrlGetRequest.append("&category=" + category);
-		otdbUrlGetRequest.append("&difficulty=" + difficulty);
-		otdbUrlGetRequest.append("&type=" + type);
-	        otdbUrlGetRequest.append("&encode=url3986");
-		
-		callOtdbUrl(otdbUrlGetRequest.toString());
-		
-		List triviaQuestionsList = new ArrayList<TriviaQuestion>();
-		TriviaQuestion triviaQuestion = new TriviaQuestion();
-		
-		
-		return triviaQuestionsList;
-	}
-	
-	private callOtdbUrl(String otdbUrl){
-		UrlConnection urlConnection = new UrlConnection():
-	}
-}
+      public List getTriviaQuestions(String count, String category, String type, String difficulty) {
+         StringBuffer otdbUrlGetRequest = new StringBuffer();
+         otdbUrlGetRequest.append(opentdbUrl);
+         otdbUrlGetRequest.append("?amount=" + count);
+         otdbUrlGetRequest.append("&category=" + category);
+         otdbUrlGetRequest.append("&difficulty=" + difficulty);
+         otdbUrlGetRequest.append("&type=" + type);
+         otdbUrlGetRequest.append("&encode=url3986");
+
+         String triviaQuestionJson = callOtdbUrl(otdbUrlGetRequest.toString());
+
+         List triviaQuestionsList = new ArrayList<TriviaQuestion>();
+         TriviaQuestion triviaQuestion = new TriviaQuestion();
+
+         return triviaQuestionsList;
+      }
+
+      private callOtdbUrl(String otdbUrl){
+         UrlConnection urlConnection = new UrlConnection();
+         InputStreamReader in = null;
+         StringBuilder sb = new StringBuilder();
+         try {
+            URL url = new URL(otdbUrl);
+            urlConnection = url.openConnection();
+            if (urlConnection != null){
+               urlConnection.setReadTimeout(60 * 1000);
+            }
+            if (urlConnection != null && urlConnection.getInputStream() != null) {
+               in = new InputStreamReader(urlConnection.getInputStream(), Charset.defaultCharset());
+               BufferedReader bufferedReader = new BufferedReader(in);
+               if (bufferedReader != null) {
+                  int cp;
+                  while ((cp = bufferedReader.read()) != -1) {
+                     sb.append((char) cp);
+                  }
+                  bufferedReader.close();
+               }
+            }
+            in.close();
+         } catch (Exception e) {
+            throw new RuntimeException("Exception while calling URL:"+ myURL, e);
+         } 
+ 
+      }
+   }
