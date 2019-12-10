@@ -33,7 +33,11 @@ public class TriviaServlet extends HttpServlet{
    }
 
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            
+      String count = request.getParameter("count") != null ? request.getParameter("count") : "";
+      String category = request.getParameter("category") != null ? request.getParameter("category") : "";
+      String type = request.getParameter("type") != null ? request.getParameter("type") : "";
+      String difficulty = request.getParameter("difficulty") != null ? request.getParameter("difficulty") : "";
+      
       // Set response content type
       response.setContentType("text/html");
 
