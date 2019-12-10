@@ -48,7 +48,7 @@
      $('#getTriviaQuiz').linkbutton({
         iconCls: 'icon-search',
         onClick: function(){
-           $.post("triviaServlet.do",{
+           $.post("trivia.do",{
                   count: count.id,
                   category: category.id,
                   type: type.id,
