@@ -31,6 +31,7 @@
             <p><input id="category" class="easyui-combobox" name="category"></p>
             <p><input id="type" class="easyui-combobox" name="type"></p>
             <p><input id="difficulty" class="easyui-combobox" name="difficulty"></p>
+            <p><a id="getTriviaQuiz" class="easyui-linkbutton" href="#">Get Trivia Quiz</a></p>
          </div>
        </div>
        <div class="col-sm-4">
