@@ -13,3 +13,23 @@ function loadQuestionParams(){
       }
   });
 }
+
+
+   $( document ).ready(function() {
+      $('#category').combobox({
+         url:'json/categoryData.json',
+         valueField:'id',
+         textField:'category'
+      });
+      $('#type').combobox({
+          url:'json/type.json',
+          valueField:'id',
+          textField:'category'
+       });
+      $('#difficulty').combobox({
+          url:'json/difficulty.json',
+          valueField:'id',
+          textField:'category'
+       });
+   });
+
