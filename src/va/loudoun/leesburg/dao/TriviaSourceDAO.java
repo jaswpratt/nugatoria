@@ -5,7 +5,11 @@ package va.loudoun.leesburg.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.charset.Charset;
 import va.loudoun.leesburg.model.TriviaQuestion;
 
 /**
@@ -25,12 +29,19 @@ public class TriviaSourceDAO {
 		otdbUrlGetRequest.append("?amount=" + count);
 		otdbUrlGetRequest.append("&category=" + category);
 		otdbUrlGetRequest.append("&difficulty=" + difficulty);
-		otdbUrlGetRequest.append("&type=" + type);&encode=url3986
+		otdbUrlGetRequest.append("&type=" + type);
 	        otdbUrlGetRequest.append("&encode=url3986");
+		
+		callOtdbUrl(otdbUrlGetRequest.toString());
+		
 		List triviaQuestionsList = new ArrayList<TriviaQuestion>();
 		TriviaQuestion triviaQuestion = new TriviaQuestion();
 		
 		
 		return triviaQuestionsList;
+	}
+	
+	private callOtdbUrl(String otdbUrl){
+		UrlConnection urlConnection = new UrlConnection():
 	}
 }
