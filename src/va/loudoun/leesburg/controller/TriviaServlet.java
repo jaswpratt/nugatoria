@@ -34,12 +34,16 @@ public class TriviaServlet extends HttpServlet{
 
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       TriviaSourceDAO triviaSourceDAO = new TriviaSourceDAO();
+      TriviaParams triviaParams = new TriviaParams();
       String count = request.getParameter("count") != null ? request.getParameter("count") : "";
       String category = request.getParameter("category") != null ? request.getParameter("category") : "";
       String type = request.getParameter("type") != null ? request.getParameter("type") : "";
       String difficulty = request.getParameter("difficulty") != null ? request.getParameter("difficulty") : "";
-      
-      triviaSourceDAO.getTriviaQuestions(count, category, type, difficulty);
+      triviaParams.setCount(count);
+      triviaParams.setCategory(category);
+      triviaParams.setType(type);
+      triviaParams.setDifficulty(difficulty);
+      triviaSourceDAO.getTriviaQuestions(triviaParams);
       
       // Set response content type
       response.setContentType("text/html");
