@@ -4,17 +4,6 @@
  * https://www.w3schools.com/js/js_json_files.asp
  */
 
-
-function loadQuestionParams(){
-  d3.json("json/questionData.json", function(data) {
-      for (var i = 0; i < data.length; i++) {
-          console.log(data);
-          console.log(data);
-      }
-  });
-}
-
-
    $( document ).ready(function() {
       $('#category').combobox({
          url:'json/categoryData.json',
