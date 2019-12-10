@@ -39,6 +39,7 @@ public class TriviaServlet extends HttpServlet{
       String type = request.getParameter("type") != null ? request.getParameter("type") : "";
       String difficulty = request.getParameter("difficulty") != null ? request.getParameter("difficulty") : "";
       
+      triviaSourceDAO.getTriviaQuestions(count, category, type, difficulty);
       
       // Set response content type
       response.setContentType("text/html");
