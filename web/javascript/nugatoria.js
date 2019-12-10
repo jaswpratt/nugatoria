@@ -5,6 +5,11 @@
  */
 
    $( document ).ready(function() {
+      $('#count').combobox({
+         url:'json/count.json',
+         valueField:'id',
+         textField:'count'
+      });
       $('#category').combobox({
          url:'json/categoryData.json',
          valueField:'id',
