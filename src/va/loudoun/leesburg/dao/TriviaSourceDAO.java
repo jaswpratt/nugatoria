@@ -18,6 +18,8 @@ import va.loudoun.leesburg.model.TriviaQuestion;
  */
 public class TriviaSourceDAO {
    public static final String opentdbUrl = "https://opentdb.com/api.php";
+   private List triviaQuestionsList = null;
+   
    /**
     * 
     */
@@ -34,7 +36,7 @@ public class TriviaSourceDAO {
          System.out.println(otdbUrlGetRequest.toString());
          String triviaJson = callOtdbUrl(otdbUrlGetRequest.toString());
          System.out.println(triviaJson);
-         //List triviaQuestionsList = new ArrayList<TriviaQuestion>();
+         //triviaQuestionsList = new ArrayList<TriviaQuestion>();
          //TriviaQuestion triviaQuestion = new TriviaQuestion();
 
          return triviaQuestionsList;
