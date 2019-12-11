@@ -3,10 +3,10 @@
  * https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js
  * https://www.w3schools.com/js/js_json_files.asp
  */
-   var count {id : "10", value: "10"};
-   var category {id : "any", value: "Any Category"};
-   var type {id : "any", value: "Any Type"};
-   var difficulty {id : "any", value: "Any Difficulty"};
+   var count = {id : "10", value: "10"};
+   var category = {id : "any", value: "Any Category"};
+   var type = {id : "any", value: "Any Type"};
+   var difficulty = {id : "any", value: "Any Difficulty"};
 
    $( document ).ready(function() {
       $('#count').combobox({
