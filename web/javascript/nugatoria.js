@@ -19,7 +19,7 @@
          }
       });
       $('#category').combobox({
-         url:'json/categoryData.json',
+         url:'json/category.json',
          valueField:'id',
          textField:'category',
          onSelect: function(rec){
