@@ -25,7 +25,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   <li>Platform/IDE
     <ul>
       <li>Java JDK 1.8</li>
-      <li>Eclipse 2019</li>
+      <li>Eclipse 2019-09</li>
     </ul>
   </li>
   <li>Servers
