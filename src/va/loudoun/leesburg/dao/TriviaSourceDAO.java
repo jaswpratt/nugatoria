@@ -25,13 +25,13 @@ public class TriviaSourceDAO {
     */
    public TriviaSourceDAO() { }
 
-      public List getTriviaQuestions(String count, String category, String type, String difficulty) {
+      public List getTriviaQuestions(TriviaParams triviaParams) {
          StringBuffer otdbUrlGetRequest = new StringBuffer();
          otdbUrlGetRequest.append(opentdbUrl);
-         otdbUrlGetRequest.append("?amount=" + count);
-         otdbUrlGetRequest.append("&category=" + category);
-         otdbUrlGetRequest.append("&difficulty=" + difficulty);
-         otdbUrlGetRequest.append("&type=" + type);
+         otdbUrlGetRequest.append("?amount=" + triviaParams.getCount);
+         otdbUrlGetRequest.append("&category=" + triviaParams.getCategory);
+         otdbUrlGetRequest.append("&difficulty=" + triviaParams.getDifficulty);
+         otdbUrlGetRequest.append("&type=" + triviaParams.getType);
          otdbUrlGetRequest.append("&encode=url3986");
          System.out.println(otdbUrlGetRequest.toString());
          String triviaJson = callOtdbUrl(otdbUrlGetRequest.toString());
