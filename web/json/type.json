@@ -1,5 +1,5 @@
 [
-  {"id": "any", "category": "Any Type"},
-  {"id":  "multiple", "category":  "Multiple Choice"},
-  {"id": "boolean", "category": "True/False"}
+  {"id": "any", "type": "Any Type"},
+  {"id":  "multiple", "type":  "Multiple Choice"},
+  {"id": "boolean", "type": "True/False"}
 ]
