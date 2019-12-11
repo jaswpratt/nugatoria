@@ -1,6 +1,6 @@
 [
-  {"id": "any", "category": "Any Difficulty"},
-  {"id": "easy", "category": "Easy"},
-  {"id": "medium", "category": "Medium"},
-  {"id": "hard", "category": "Hard"}
+  {"id": "any", "difficulty": "Any Difficulty"},
+  {"id": "easy", "difficulty": "Easy"},
+  {"id": "medium", "difficulty": "Medium"},
+  {"id": "hard", "difficulty": "Hard"}
 ]
