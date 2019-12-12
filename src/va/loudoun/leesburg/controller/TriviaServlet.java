@@ -39,7 +39,7 @@ public class TriviaServlet extends HttpServlet{
 
    @Override
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	   System.out.println("Run Run RUn");
+      System.out.println("Entering TriviaServlet doPost()");
       TriviaSourceDAO triviaSourceDAO = new TriviaSourceDAO();
       TriviaParams triviaParams = new TriviaParams();
       String count = request.getParameter("count") != null ? request.getParameter("count") : "";
