@@ -49,6 +49,7 @@
 			<lib dir="${basedir}/web/WEB-INF/lib">
 			   <include name="*.jar" />
 			</lib>
+	          <classes dir='deploy\web\WEB-INF\classes" />
 		</war>
 	</target>
 </project>
