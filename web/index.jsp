@@ -16,7 +16,7 @@
       <title>Nugatoria</title>
    </head>
    <body>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="background: linear-gradient(to bottom, #669999 0%, #ffffff 100%);">
   <h1>Nugatoria is Nugatory</h1>
   <p>A trivia game with questions of little or no consequence.</p> 
 </div>
