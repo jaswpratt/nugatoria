@@ -10,6 +10,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+
+import va.loudoun.leesburg.model.TriviaParams;
 import va.loudoun.leesburg.model.TriviaQuestion;
 
 /**
@@ -28,10 +30,10 @@ public class TriviaSourceDAO {
       public List getTriviaQuestions(TriviaParams triviaParams) {
          StringBuffer otdbUrlGetRequest = new StringBuffer();
          otdbUrlGetRequest.append(opentdbUrl);
-         otdbUrlGetRequest.append("?amount=" + triviaParams.getCount);
-         otdbUrlGetRequest.append("&category=" + triviaParams.getCategory);
-         otdbUrlGetRequest.append("&difficulty=" + triviaParams.getDifficulty);
-         otdbUrlGetRequest.append("&type=" + triviaParams.getType);
+         otdbUrlGetRequest.append("?amount=" + triviaParams.getAmount());
+         otdbUrlGetRequest.append("&category=" + triviaParams.getCategory());
+         otdbUrlGetRequest.append("&difficulty=" + triviaParams.getDifficulty());
+         otdbUrlGetRequest.append("&type=" + triviaParams.getType());
          otdbUrlGetRequest.append("&encode=url3986");
          System.out.println(otdbUrlGetRequest.toString());
          String triviaJson = callOtdbUrl(otdbUrlGetRequest.toString());
@@ -42,8 +44,8 @@ public class TriviaSourceDAO {
          return triviaQuestionsList;
       }
 
-      private callOtdbUrl(String otdbUrl){
-         UrlConnection urlConnection = new UrlConnection();
+      private String callOtdbUrl(String otdbUrl){
+         URLConnection urlConnection = null;
          InputStreamReader in = null;
          StringBuilder sb = new StringBuilder();
          try {
@@ -65,8 +67,8 @@ public class TriviaSourceDAO {
             }
             in.close();
          } catch (Exception e) {
-            throw new RuntimeException("Exception while calling URL:"+ myURL, e);
+            throw new RuntimeException("Exception while calling URL:", e);
          } 
- 
+         return null;
       }
    }

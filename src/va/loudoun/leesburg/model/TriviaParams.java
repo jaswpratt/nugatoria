@@ -14,7 +14,7 @@ public class TriviaParams {
     */
    public TriviaParams() { }
    
-   private int amount = 0;
+   private String amount = null;
    private String category = null;
    private String difficulty = null;
    private String type = null;
@@ -23,15 +23,15 @@ public class TriviaParams {
    /**
     * @return the amount
     */
-   public int getAmount() {
+   public String getAmount() {
       return amount;
    }
    
    /**
-    * @param amount the amount to set
+    * @param count the amount to set
     */
-   public void setAmount(int amount) {
-      this.amount = amount;
+   public void setAmount(String count) {
+      this.amount = count;
    }
    
    /**
