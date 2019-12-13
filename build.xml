@@ -42,14 +42,14 @@
    	  </copy>
    </target>
 	
-	<target name="war" depends="clean,compile" >
+   <target name="war" depends="clean,compile" >
       <mkdir dir="${project.dir.dist}"/>
-		<war destfile="${project.dir.dist}/${project.app.warname}" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
-		   <exclude name="WEB-INF/**" />
-			<lib dir="${basedir}/web/WEB-INF/lib">
-			   <include name="*.jar" />
-			</lib>
-	          <classes dir="deploy\web\WEB-INF\classes" />
-		</war>
-	</target>
+      <war destfile="${project.dir.dist}/${project.app.warname}" basedir="${basedir}/web" webxml="${basedir}/web/WEB-INF/web.xml">
+         <exclude name="WEB-INF/**" />
+            <lib dir="${basedir}/web/WEB-INF/lib">
+               <include name="*.jar" />
+            </lib>
+         <classes dir="deploy\web\WEB-INF\classes" />
+      </war>
+   </target>
 </project>
