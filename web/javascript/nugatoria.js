@@ -1,6 +1,6 @@
 /**
  * nugatoria.js
- * 
+ * @author Sabine
  */
    var count = {id : "10", value: "10"};
    var category = {id : "any", value: "Any Category"};
