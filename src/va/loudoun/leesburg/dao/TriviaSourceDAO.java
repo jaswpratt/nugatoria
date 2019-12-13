@@ -67,7 +67,8 @@ public class TriviaSourceDAO {
 			 */
          } catch (Exception e) {
             throw new RuntimeException("Exception while calling URL: "+ otdbUrl, e);
-         } 
+         }
+         System.out.println("Exiting callOtdbUrl()");
          return sb.toString();
       }
    }
