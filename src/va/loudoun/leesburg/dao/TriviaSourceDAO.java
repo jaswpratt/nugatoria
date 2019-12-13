@@ -45,10 +45,11 @@ public class TriviaSourceDAO {
       }
 
       private String callOtdbUrl(String otdbUrl){
+         System.out.println("Entering callOtdbUrl()");
          URLConnection urlConnection = null;
          InputStreamReader in = null;
          StringBuilder sb = new StringBuilder();
-         System.out.println("Boo Boo ");
+         
          try {
             URL url = new URL(otdbUrl);
             urlConnection = url.openConnection();
