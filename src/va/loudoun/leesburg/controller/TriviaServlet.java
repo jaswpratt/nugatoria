@@ -50,6 +50,7 @@ public class TriviaServlet extends HttpServlet{
       triviaParams.setCategory(category);
       triviaParams.setType(type);
       triviaParams.setDifficulty(difficulty);
+      System.out.println("=====  " + triviaParams.toString());
       triviaSourceDAO.getTriviaQuestions(triviaParams);
       
       // Set response content type

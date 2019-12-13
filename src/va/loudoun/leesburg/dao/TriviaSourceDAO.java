@@ -48,27 +48,25 @@ public class TriviaSourceDAO {
          URLConnection urlConnection = null;
          InputStreamReader in = null;
          StringBuilder sb = new StringBuilder();
+         System.out.println("Boo Boo ");
          try {
             URL url = new URL(otdbUrl);
             urlConnection = url.openConnection();
-            if (urlConnection != null){
-               urlConnection.setReadTimeout(60 * 1000);
-            }
-            if (urlConnection != null && urlConnection.getInputStream() != null) {
-               in = new InputStreamReader(urlConnection.getInputStream(), Charset.defaultCharset());
-               BufferedReader bufferedReader = new BufferedReader(in);
-               if (bufferedReader != null) {
-                  int cp;
-                  while ((cp = bufferedReader.read()) != -1) {
-                     sb.append((char) cp);
-                  }
-                  bufferedReader.close();
-               }
-            }
-            in.close();
+			/*
+			 * if (urlConnection != null){ urlConnection.setReadTimeout(60 * 1000); }
+			 */
+            System.out.println("---- Test == " + (urlConnection != null && urlConnection.getInputStream() != null));
+			/*
+			 * if (urlConnection != null && urlConnection.getInputStream() != null) { in =
+			 * new InputStreamReader(urlConnection.getInputStream(),
+			 * Charset.defaultCharset()); BufferedReader bufferedReader = new
+			 * BufferedReader(in); if (bufferedReader != null) { int cp; while ((cp =
+			 * bufferedReader.read()) != -1) { sb.append((char) cp); }
+			 * bufferedReader.close(); } } in.close();
+			 */
          } catch (Exception e) {
-            throw new RuntimeException("Exception while calling URL:", e);
+            throw new RuntimeException("Exception while calling URL: "+ otdbUrl, e);
          } 
-         return null;
+         return sb.toString();
       }
    }
