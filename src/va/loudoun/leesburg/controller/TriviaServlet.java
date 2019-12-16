@@ -19,7 +19,7 @@ import va.loudoun.leesburg.model.TriviaParams;
  * @author Sabine
  *
  */
-@WebServlet(name = "trivia", urlPatterns = { "/trivia.do" }, loadOnStartup = 1)
+@WebServlet(name = "trivia", urlPatterns = { "/trivia" }, loadOnStartup = 1)
 public class TriviaServlet extends HttpServlet{
 
    /**
