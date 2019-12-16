@@ -46,7 +46,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   <li>Java libraries
     <ul>
        <li>javax.servlet-3.0.jar</li>
-      <li><a href="https://github.com/google/gson">gson-2.8.6.jar</a></li>
+      <li><a href="https://github.com/google/gson">gson-2.8.5.jar</a></li>
     </ul>
   </li>
   <li>Javascript libraries
