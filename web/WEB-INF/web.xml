@@ -4,12 +4,12 @@
      Nugatoria is Nugatory
    </description>
    <display-name>Nugatoria is Nugatory</display-name>
-      <servlet>
+<!--       <servlet>
          <servlet-name>TriviaServlet</servlet-name>
          <servlet-class>va.loudoun.leesburg.controller.TriviaServlet</servlet-class>
       </servlet>
       <servlet-mapping>
          <servlet-name>TriviaServlet</servlet-name>
          <url-pattern>/trivia</url-pattern>
-      </servlet-mapping>
+      </servlet-mapping> -->
 </web-app> 

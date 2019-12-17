@@ -45,8 +45,10 @@ public class TriviaSourceDAO {
          //TriviaQuestion triviaQuestion = new TriviaQuestion();
          
          Gson gson = new Gson();
-         ArrayList triviaArrayList = new ArrayList();
-         triviaArrayList = gson.fromJson(triviaJsonTest, ArrayList.class);
+         String triviaJsonResults = "{" + triviaJsonTest.substring(triviaJsonTest.indexOf("\"response_code\":0") + 17, triviaJsonTest.length() - 1);
+         System.out.println("==+-+== " + triviaJsonResults);
+        ArrayList triviaArrayList = new ArrayList();
+        //triviaArrayList = gson.fromJson(triviaJsonResults, ArrayList.class);
          
          JsonObject jsonObject = gson.fromJson(triviaJsonTest, JsonObject.class);
          System.out.println(jsonObject.get("results"));
