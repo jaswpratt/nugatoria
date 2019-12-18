@@ -1,4 +1,5 @@
 /**
+ * Example URL returns json string:
  * https://opentdb.com/api.php?amount=13&category=20&difficulty=medium&type=multiple&encode=url3986
  */
 package va.loudoun.leesburg.dao;
