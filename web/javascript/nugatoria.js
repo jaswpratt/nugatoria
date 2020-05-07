@@ -54,12 +54,22 @@
                   difficulty: difficulty.id
            }, function(data, status, xhr){
               triviaQuizCallback(data, status);
-           }, "text");
+           }, "json");
         } 
      });
    });
 
    function triviaQuizCallback(data, status){
-      alert(data);
-      alert(status);
+      if(data.length == 0){
+         var message = "Unable to get trivia questions for:";
+         message += "\n  - count = " + count.id;
+         message += "\n  - category = " + category.id;
+         message += "\n  - type = " + type.id;
+         message += "\n  - difficulty = " + difficulty.id;
+         alert(message);
+         return null;
+      }
+   
+   
+       alert(data);
    }
