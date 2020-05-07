@@ -1,6 +1,7 @@
 /**
  * nugatoria.js
  * @author Sabine
+ * https://stackoverflow.com/questions/4308554/simplest-way-to-read-json-from-a-url-in-java
  */
    var count = {id : "10", value: "10"};
    var category = {id : "any", value: "Any Category"};
