@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
 import va.loudoun.leesburg.dao.TriviaSourceDAO;
 import va.loudoun.leesburg.model.TriviaParams;
 
@@ -31,7 +33,7 @@ public class TriviaServlet extends HttpServlet{
     * Constructor
     */
    public TriviaServlet() { }
-    
+   private Gson gson = new Gson();
    public void init() throws ServletException {
       // Do required initialization
        
@@ -51,13 +53,15 @@ public class TriviaServlet extends HttpServlet{
       triviaParams.setType(type);
       triviaParams.setDifficulty(difficulty);
       System.out.println("=====  " + triviaParams.toString());
-      triviaSourceDAO.getTriviaQuestions(triviaParams);
       
-      // Set response content type
-      response.setContentType("text/html");
-
-      // Actual logic goes here.
+      String triviaQuestionsJson = this.gson.toJson(triviaSourceDAO.getTriviaQuestions(triviaParams));
+      //triviaSourceDAO.getTriviaQuestions(triviaParams);
+      
       PrintWriter out = response.getWriter();
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      out.print(triviaQuestionsJson);
+      out.flush();
 
    }
    
