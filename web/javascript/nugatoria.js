@@ -7,6 +7,17 @@
    var category = {id : "any", value: "Any Category"};
    var type = {id : "any", value: "Any Type"};
    var difficulty = {id : "any", value: "Any Difficulty"};
+   var results = "";
+   var triviaQuestionList = new Array();
+   var triviaQuestion = {
+         category : "",
+         question : "",
+         type : "",
+         correctAnswer : "",
+         incorrectAnswers : new Array(),
+         selectedAnswer : "",
+         difficulty : ""
+   }
 
    $( document ).ready(function() {
       $('#count').combobox({
@@ -70,7 +81,27 @@
          alert(message);
          return null;
       }
+
+      data.forEach(createQuestionList);
+      
+      alert(triviaQuestionList);
+   }
    
-   
-       alert(data);
+   function createQuestionList(question) {
+      triviaQuestion = {  //Create a new triviaQuestion object each time
+         category : "",
+         question : "",
+         type : "",
+         correctAnswer : "",
+         incorrectAnswers : new Array(),
+         selectedAnswer : "",
+         difficulty : ""
+      }
+      triviaQuestion.category = question.category;
+      triviaQuestion.question = question.question;
+      triviaQuestion.type = question.type;
+      triviaQuestion.correctAnswer = question.correctAnswer;
+      triviaQuestion.incorrectAnswers = question.incorrectAnswers;
+      triviaQuestion.difficulty = question.difficulty;
+      triviaQuestionList.push(triviaQuestion);     
    }

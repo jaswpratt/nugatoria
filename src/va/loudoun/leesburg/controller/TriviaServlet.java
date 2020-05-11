@@ -52,11 +52,11 @@ public class TriviaServlet extends HttpServlet{
       triviaParams.setCategory(category);
       triviaParams.setType(type);
       triviaParams.setDifficulty(difficulty);
-      System.out.println("=====  " + triviaParams.toString());
-      
+//      System.out.println("=====  " + triviaParams.toString());
+
       String triviaQuestionsJson = this.gson.toJson(triviaSourceDAO.getTriviaQuestions(triviaParams));
-      //triviaSourceDAO.getTriviaQuestions(triviaParams);
-      
+
+//      System.out.println("==mm==  " + triviaQuestionsJson);
       PrintWriter out = response.getWriter();
       response.setContentType("application/json");
       response.setCharacterEncoding("UTF-8");

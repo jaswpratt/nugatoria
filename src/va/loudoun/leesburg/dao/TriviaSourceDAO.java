@@ -34,7 +34,6 @@ public class TriviaSourceDAO {
    public TriviaSourceDAO() { }
 
       public List<TriviaQuestion> getTriviaQuestions(TriviaParams triviaParams) {
-         Object object = new Object();
          JSONObject jsonObject = new JSONObject();
          JSONArray otdbJsonArray = new JSONArray();
          Long openTDBResponse = (long) -1;
@@ -53,11 +52,10 @@ public class TriviaSourceDAO {
          
       System.out.println("- - - - \n" + triviaJson);
          
-         object = JSONValue.parse(triviaJson);
          jsonObject = new JSONObject();
          otdbJsonArray = new JSONArray();
             
-         jsonObject = (JSONObject) object;
+         jsonObject = (JSONObject)JSONValue.parse(triviaJson);
          openTDBResponse =  (Long) jsonObject.get("response_code");
          otdbJsonArray = (JSONArray) jsonObject.get("results");
          System.out.println("otdbJsonArray response code ++++  " + openTDBResponse + "\n");

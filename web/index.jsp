@@ -37,6 +37,7 @@
        <div class="col-sm-4">
          <h3>Here is your quiz.</h3>
          <div id="gameQuestions">
+           <span id="triviaquestion"></span>
          </div>
        </div>
        <div class="col-sm-4">
