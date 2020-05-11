@@ -30,7 +30,7 @@ The <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a> then
   </li>
   <li>Servers
     <ul>
-      <li>Apache Tomcat 8 - currently running locally as <tt><a href="http://45.132.242.103:8080/nugatoria/">http://45.132.242.103:8080/nugatoria/</a></tt></li>
+      <li>Apache Tomcat 8 - currently running as <tt><a href="http://45.132.242.103:8080/nugatoria/">http://45.132.242.103:8080/nugatoria/</a></tt></li>
       <li>nugatoria.war - created using Ant build.xml task <b>war</b></li>
     </ul>
   </li>
