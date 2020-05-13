@@ -9,6 +9,7 @@
    var difficulty = {id : "any", value: "Any Difficulty"};
    var results = "";
    var triviaQuestionList = new Array();
+   var panelQuestions = new Array();
    var triviaQuestion = {
          category : "",
          question : "",
@@ -83,8 +84,8 @@
       }
 
       data.forEach(createQuestionList);
-      
-      alert(triviaQuestionList);
+      createQuestionPanel(triviaQuestionList);
+
    }
    
    function createQuestionList(question) {
@@ -104,4 +105,20 @@
       triviaQuestion.incorrectAnswers = question.incorrectAnswers;
       triviaQuestion.difficulty = question.difficulty;
       triviaQuestionList.push(triviaQuestion);     
+   }
+
+   function createQuestionPanel(questionList){
+	   panelQuestions = new Array();
+	   var questionHtml = "";
+	   for(var i= 0; i < questionList.length; i++){
+		   questionHtml = "";
+		   questionHtml += "<span id='tq'" + i + ">" + questionList[i].question + "</span>\n<p>";
+		   questionHtml += "<ol type='a'>\n";
+		   questionHtml += "   <li><input type='radio' id='a' name='answer' value='"+ questionList[i].incorrectAnswers[0] + "'>  " + questionList[i].incorrectAnswers[0] + "</input></li>\n";
+		   questionHtml += "   <li><input type='radio' id='b' name='answer' value='"+ questionList[i].correctAnswer + "'>  " + questionList[i].correctAnswer + "</input></li>\n";
+		   questionHtml += "   <li><input type='radio' id='c' name='answer' value='"+ questionList[i].incorrectAnswers[1] + "'>  " + questionList[i].incorrectAnswers[1] + "</input></li>\n";
+		   questionHtml += "   <li><input type='radio' id='d' name='answer' value='"+ questionList[i].incorrectAnswers[2] + "'>  " + questionList[i].incorrectAnswers[2] + "</input></li>\n";
+		   questionHtml += "</ol>";
+		   panelQuestions.push(questionHtml);
+	   }
    }
