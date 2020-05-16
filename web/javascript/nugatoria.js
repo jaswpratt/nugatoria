@@ -21,6 +21,7 @@
    }
 
    $( document ).ready(function() {
+      $('#gameQuestions').hide();
       $('#count').combobox({
          url:'json/count.json',
          valueField:'id',
@@ -58,7 +59,7 @@
           }
      });
      $('#getTriviaQuiz').linkbutton({
-        iconCls: 'icon-search',
+        iconCls: 'searchbox',
         onClick: function(){
            $.post("trivia",{
                   count: count.id,
@@ -85,7 +86,7 @@
 
       data.forEach(createQuestionList);
       createQuestionPanel(triviaQuestionList);
-
+      playTriviaGame();
    }
    
    function createQuestionList(question) {
@@ -122,3 +123,17 @@
 		   panelQuestions.push(questionHtml);
 	   }
    }
+   
+   function playTriviaGame(){
+      $('#gameQuestionPanel').html(panelQuestions[0]);
+      $('#gameQuestions').show();
+   }
+   
+   $(function(){
+	    var i = 0;
+	    $('#btnNextQuestion').bind('click', function(){
+	    	if (i < panelQuestions.length){
+	    	   $('#gameQuestionPanel').html(panelQuestions[i++]);
+	    	}
+	    });
+	});

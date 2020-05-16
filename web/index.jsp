@@ -34,13 +34,19 @@
             <p><a id="getTriviaQuiz" class="easyui-linkbutton" href="#">Get Trivia Quiz</a></p>
          </div>
        </div>
-       <div class="col-sm-4">
+       <div class="col-sm-6">
          <h3>Here is your quiz.</h3>
-         <div id="gameQuestions">
-           <span id="triviaquestion"></span>
+         <div id="gameQuestions" class="easyui-panel" >
+            <div id="gameQuestionPanel" class="easyui-panel" title="Question One" style="width:100%;height:250px;padding:10px;">
+               
+		      </div>
+		      <div id="btnTriviaGameNav" style="width:100%;padding:10px;">
+		      <a id="btnSubmitQuestion" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">Submit Answer</a>
+               &nbsp;&nbsp;&nbsp;<a id="btnNextQuestion" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">Next Question</a>
+            </div>
          </div>
        </div>
-       <div class="col-sm-4">
+       <div class="col-sm-2">
          <h3>Quiz Status</h3>        
          <div id="gameStatus">
          </div>
